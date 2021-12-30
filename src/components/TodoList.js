@@ -1,9 +1,10 @@
-import React from 'react'
+
 import Paper from '@material-ui/core/Paper'
-import Divider from '@material-ui/core/Divider'
+
 
 import Todo from './Todo'
 import { Typography } from '@material-ui/core'
+import Empty from './Empty'
 function TodoList({ todos, removeTodo, toggleTodo, EditTodo,  }) {
     if (todos.length)
         return (
@@ -26,7 +27,7 @@ function TodoList({ todos, removeTodo, toggleTodo, EditTodo,  }) {
 
         )
 
-    return <Typography variant="body1" > All Todos Completed ! </Typography>
+    return <Empty></Empty>
 
 
 
