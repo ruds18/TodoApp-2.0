@@ -32,7 +32,7 @@ function Empty() {
             <Card>
               <CardMedia
                 component="iframe"
-                height="210px"
+                height="150px"
                 title="test"
                 src="https://www.youtube.com/embed/TwQ5jUQwyks"
               />
@@ -55,7 +55,7 @@ function Empty() {
             <Card sx={{ maxWidth: 20 }}>
               <CardMedia
                 component="iframe"
-                height="210px"
+                height="150px"
                 title="test"
                 src="https://www.youtube.com/embed/rO-V04slXak"
               />
