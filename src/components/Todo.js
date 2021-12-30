@@ -8,6 +8,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit'
 import useToggler from './hooks/useToggler'
 import EditForm from './EditForm'
+import Divider from '@material-ui/core/Divider'
 
 function Todo({task, completed, id, removeTodo, toggleTodo, EditTodo}) {
     const[isEditing, toggleIsEditing ] = useToggler(false)
@@ -19,7 +20,7 @@ function Todo({task, completed, id, removeTodo, toggleTodo, EditTodo}) {
             ) :
             <>
              <Checkbox onClick={()=> toggleTodo(id)} checked={completed}></Checkbox>
-                <ListItemText style={{textDecoration : completed ? "line-through": "none"}}>
+                <ListItemText  style={{textDecoration : completed ? "line-through": "none"}}>
                     {task}
                 </ListItemText>
                 <ListItemSecondaryAction>
@@ -33,6 +34,7 @@ function Todo({task, completed, id, removeTodo, toggleTodo, EditTodo}) {
                 </>
             }
             </ListItem>
+            <Divider />
         </div>
     )
 }

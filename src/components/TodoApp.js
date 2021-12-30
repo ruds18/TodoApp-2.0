@@ -56,7 +56,7 @@ function TodoApp() {
           <Grid container justifyContent="center" style={{marginTop:"1rem"}}>
           <Grid item xs={10} md={8} lg={6} >
           <TodoForm AddTodo={AddTodo}></TodoForm>
-          <TodoList  key={todos.id} todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} EditTodo={EditTodo} ></TodoList>
+          <TodoList   todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} EditTodo={EditTodo} ></TodoList>
           </Grid>
           </Grid>
       </Paper>
