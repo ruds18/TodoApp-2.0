@@ -15,7 +15,7 @@ function TodoForm({ AddTodo }) {
             reset();
           }}
         >
-          <TextField value={value} onChange={handelChange} margin="normal" label="Add new Todo" fullWidth></TextField>
+          <TextField value={value} required onChange={handelChange} margin="normal" label="Add new Todo" fullWidth></TextField>
         </form>
       </Paper>
     </div>

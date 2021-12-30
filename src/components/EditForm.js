@@ -1,6 +1,7 @@
-import { TextField } from '@material-ui/core'
+import { IconButton, ListItemSecondaryAction, TextField } from '@material-ui/core'
 import React from 'react'
 import useInputForm from './hooks/useInputForm'
+import CloseIcon from '@material-ui/icons/Close';
 
 function EditForm({id, EditTodo, task, toggle}) {
     const [value, handelChange, reset] = useInputForm(task)
@@ -15,8 +16,13 @@ function EditForm({id, EditTodo, task, toggle}) {
              toggle()
 
          }}>
-            <TextField margin="normal" value={value} onChange={handelChange} fullWidth autoFocus>
+            <TextField margin="normal" value={value} onChange={handelChange} fullWidth autoFocus required>
             </TextField>
+            <ListItemSecondaryAction>
+                <IconButton onClick={()=> toggle()}>
+                    <CloseIcon color="error"></CloseIcon>
+                </IconButton>
+            </ListItemSecondaryAction>
             </form>
         </div>
     )
